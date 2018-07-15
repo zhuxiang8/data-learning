@@ -12,4 +12,5 @@ public class DataLearningApplication {
         System.out.println("测试分支合并--主");
         SpringApplication.run(DataLearningApplication.class, args);
     }
+	
 }
