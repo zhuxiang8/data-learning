@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DataLearningApplication {
 
     public static void main(String[] args) {
+	    System.out.println("测试分支合并--次");
         SpringApplication.run(DataLearningApplication.class, args);
     }
+	
 }
