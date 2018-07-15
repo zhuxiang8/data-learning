@@ -11,6 +11,7 @@ import com.zhuxiang.controller.web.user.req.UpdateUserReq;
 import com.zhuxiang.pojo.vo.web.user.UserVO;
 import com.zhuxiang.service.user.UserService;
 import io.swagger.annotations.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,7 @@ import org.springframework.web.bind.annotation.*;
 @Api(tags = "用户注册controller")
 @RestController
 @RequestMapping("/api/user")
+@Slf4j
 public class UserController {
     @Autowired
     private UserService userService;
@@ -34,9 +36,9 @@ public class UserController {
      */
     @ApiOperation(value = "用户注册", notes = "输入用户名、密码等信息")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "loginName", value = "登录名", required = true, paramType = "path",dataType = "Integer"),
-            @ApiImplicitParam(name = "userName", value = "用户名", required = true, paramType = "path",dataType = "Integer"),
-            @ApiImplicitParam(name = "password", value = "密码", required = true, paramType = "path",dataType = "Integer")
+            @ApiImplicitParam(name = "loginName", value = "登录名", required = true, paramType = "path", dataType = "Integer"),
+            @ApiImplicitParam(name = "userName", value = "用户名", required = true, paramType = "path", dataType = "Integer"),
+            @ApiImplicitParam(name = "password", value = "密码", required = true, paramType = "path", dataType = "Integer")
     })
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successful — 请求已完成"),
@@ -69,10 +71,11 @@ public class UserController {
      */
     @ApiOperation(value = "查询单个用户")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "id", value = "用户id", required = true, paramType = "path",dataType = "Integer")
+            @ApiImplicitParam(name = "id", value = "用户id", required = true, paramType = "path", dataType = "Integer")
     })
     @GetMapping("/{id}")
     public AbstractResponse find(@PathVariable Long id) {
+        log.info("查询单个用户={}", id);
         UserVO userVO = userService.find(id);
         return ObjectResponse.getInstance().success(userVO);
     }

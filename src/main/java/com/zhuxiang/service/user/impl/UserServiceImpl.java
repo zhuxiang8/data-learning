@@ -11,6 +11,7 @@ import com.zhuxiang.pojo.vo.web.user.UserVO;
 import com.zhuxiang.service.user.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @Description 用户实现类
@@ -26,6 +27,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      * @param req
      */
     @Override
+    @Transactional
     public void insert(CreateUserReq req) {
         log.info("新增用户={}", req);
         User user = new User();
