@@ -5,7 +5,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.zhuxiang.common.base.pojo.entity.BaseEntity;
 import com.zhuxiang.pojo.enums.DataRegisterEnum;
-import com.zhuxiang.pojo.enums.baseinfo.user.UserTypeEnum;
+import com.zhuxiang.pojo.enums.user.UserTypeEnum;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;

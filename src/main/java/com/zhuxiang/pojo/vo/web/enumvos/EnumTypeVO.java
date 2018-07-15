@@ -1,7 +1,7 @@
 package com.zhuxiang.pojo.vo.web.enumvos;
 
 import com.zhuxiang.pojo.enums.DataRegisterEnum;
-import com.zhuxiang.pojo.enums.baseinfo.user.UserTypeEnum;
+import com.zhuxiang.pojo.enums.user.UserTypeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package com.zhuxiang.pojo.enums.baseinfo.user;
+package com.zhuxiang.pojo.enums.user;
 
 import com.baomidou.mybatisplus.enums.IEnum;
 
